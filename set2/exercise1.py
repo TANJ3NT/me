@@ -24,6 +24,7 @@ for x in some_words:
 
 print(some_words)
 
+# This was interesting as len is the grasshopper equivalent of list length
 if len(some_words) > 3:
     print('some_words contains more than 3 words')
 
