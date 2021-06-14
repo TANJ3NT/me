@@ -26,7 +26,12 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
-    return None
+    if moves == should_move:
+        return "No Problem"
+    elif moves and not should_move:
+        return "Duct Tape"
+    elif not moves and should_move:
+        return "WD-40"
 
 
 def loops_1a():
@@ -36,7 +41,11 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+    star_list = []
+    for i in range(10):
+        star_list.append("*")
+
+    return star_list
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -46,7 +55,11 @@ def loops_1c(number_of_items=5, symbol="#"):
     string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    return None
+    a_list = []
+    for i in range(number_of_items):
+        a_list.append(symbol)
+    print(a_list)
+    return a_list
 
 
 def loops_2():
@@ -67,7 +80,13 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+    stars_field = []
+    for i in range(10):
+        stars = []
+        for j in range(10):
+            stars.append("*")
+        stars_field.append(stars)
+    return stars_field
 
 
 def loops_3():
@@ -91,7 +110,13 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+    number_list = []
+    for i in range(10):
+        number = []
+        for j in range(10):
+            number.append(str(i))
+        number_list.append(number)
+    return number_list
 
 
 def loops_4():
@@ -111,7 +136,14 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    number_square = []
+    for i in range(10):
+        number_row = []
+        for j in range(10):
+            number_row.append(str(j))
+        number_square.append(number_row)
+
+    return number_square
 
 
 def loops_5():
@@ -138,6 +170,15 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
+    coords_list = []
+    for i in range(10):
+        coords = []
+        for j in range(5):
+            coords.append("(i" + str(i) + ", " + "j" + str(j) + ")")
+            # or it can be coords.append('(i{}, j{})'.format(i, j))
+        coords_list.append(coords)
+    return coords_list
+
     return None
 
 
@@ -161,7 +202,13 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    stair = []
+    for i in range(10):
+        steps = []
+        for j in range(i + 1):
+            steps.append(str(j))
+        stair.append(steps)
+    return stair
 
 
 def loops_7():
@@ -185,7 +232,20 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+    pyra_box = []
+    for i in range(5):
+        pyra_int = []
+        for j in range(4 - i):
+            pyra_int.append(" ")
+        for j in range(1 + i):
+            pyra_int.append("*")
+        for j in range(0 + i):
+            pyra_int.append("*")
+        for j in range(4 - i):
+            pyra_int.append(" ")
+        pyra_box.append(pyra_int)
+
+    return pyra_box
 
 
 def little_printer(some_kind_of_list, exercise_name):
