@@ -13,9 +13,9 @@ print("hello! Let's get started")  # it printed "hello! Let's get started"
 
 # I think it will declare a variable called some_words
 # and it'll put a list of strings into it
-some_words = ['what', 'does', 'this', 'line', 'do', '?']
+some_words = ["what", "does", "this", "line", "do", "?"]
 
-# ngl i have no idea as i'm barely grasping the concepts currently. but once it runs it makes sense 
+# ngl i have no idea as i'm barely grasping the concepts currently. but once it runs it makes sense
 for word in some_words:
     print(word)
 
@@ -26,7 +26,8 @@ print(some_words)
 
 # This was interesting as len is the grasshopper equivalent of list length
 if len(some_words) > 3:
-    print('some_words contains more than 3 words')
+    print("some_words contains more than 3 words")
+
 
 def usefulFunction():
     """
@@ -36,4 +37,7 @@ def usefulFunction():
     """
     print(platform.uname())
 
+
 usefulFunction()
+
+# check whether pushed
