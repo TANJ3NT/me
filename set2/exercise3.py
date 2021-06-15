@@ -244,7 +244,7 @@ def loops_7():
         for j in range(4 - i):
             pyra_int.append(" ")
         pyra_box.append(pyra_int)
-
+    print(pyra_box)
     return pyra_box
 
 
