@@ -289,3 +289,5 @@ if __name__ == "__main__":
     little_printer(loops_5(), "loops_5")
     little_printer(loops_6(), "loops_6")
     little_printer(loops_7(), "loops_7")
+
+# check whether pushed
