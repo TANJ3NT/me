@@ -25,10 +25,65 @@ def advancedGuessingGame():
     Remember to think modular. Try to keep your functions small and single
     purpose if you can!
     """
+    print("\nWelcome to the guessing game!")
+    valid_input = False
+    while valid_input == False:
+        print("A number between 0 and _ ?")
+        upperBound = input("Enter an upper bound: ")
+        if isinstance(upperBound, int) == True:
+            valid_input = True
+        else:
+            print("An exception occurred")
 
+    print("OK then, a number between 0 and {} ?".format(upperBound))
+    upperBound = int(upperBound)
+
+    valid_input = False
+    while valid_input == False:
+        print("A number between _ and {} ?".format(upperBound))
+        lowerBound = input("Enter an lower bound: ")
+        if isinstance(lowerBound, int) == True:
+            valid_input = True
+        else:
+            print("An exception occurred")
+
+    print("OK then, a number between {} and {} ?".format(lowerBound, upperBound))
+    lowerBound = int(lowerBound)
+
+    if lowerBound > upperBound:
+        temp = lowerBound
+        lowerBound = upperBound
+        upperBound = temp
+
+    actualNumber = random.randint(lowerBound, upperBound)
+
+    guessed = False
+    valid_input = False
+
+    while not guessed:
+        while valid_input == False:
+            guessedNumber = input("Guess a number: ")
+            if isinstance(guessedNumber, int):
+                valid_input = True
+            else:
+                print("An exception occurred")
+        guessedNumber = int(guessedNumber)
+        print("You guessed {},".format(guessedNumber))
+        if guessedNumber == actualNumber:
+            print("You got it!! It was {}".format(actualNumber))
+            guessed = True
+        elif guessedNumber < actualNumber:
+            print("Too small, try again :'(")
+            valid_input = False
+        else:
+            print("Too big, try again :'(")
+            valid_input = False
     return "You got it!"
+
     # the tests are looking for the exact string "You got it!". Don't modify that!
 
 
 if __name__ == "__main__":
     print(advancedGuessingGame())
+
+# test push
