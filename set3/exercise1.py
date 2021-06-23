@@ -9,10 +9,13 @@ def loop_ranger(start, stop=None, step=1):
     """Return a list of numbers between start and stop in steps of step.
 
     Do this using any method apart from JUST using range() #TODO: clarify this wording
-    The look up the docs for range(), you can answer this with just the range 
+    The look up the docs for range(), you can answer this with just the range
     function, but we'd like you to do it the long way, probably using a loop.
     """
-    return None
+    new_list = []
+    for i in range(start, stop, step):
+        new_list.append(i)
+    return new_list
 
 
 def lone_ranger(start, stop, step):
@@ -20,7 +23,10 @@ def lone_ranger(start, stop, step):
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
-    return None
+    my_range = []
+    for i in range(start, stop, step):
+        my_range.append(i)
+    return my_range
 
 
 def two_step_ranger(start, stop):
@@ -29,7 +35,10 @@ def two_step_ranger(start, stop):
     Sometimes you want to hide complexity.
     Make a range function that always has a step size of 2
     """
-    return None
+    my_range = []
+    for i in range(start, stop, 2):
+        my_range.append(i)
+    return my_range
 
 
 def stubborn_asker(low, high):
@@ -40,17 +49,26 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
-    return None
+    while True:
+        input_number = input("insert number here")
+        if input_number < high and input_number > low:
+            return input_number
 
 
 def not_number_rejector(message):
     """Ask for a number repeatedly until actually given one.
 
-    Ask for a number, and if the response is actually NOT a number 
+    Ask for a number, and if the response is actually NOT a number
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
+    while True:
+        input_variable = input(message)
+        try:
+            input_variable / 2
+            return input_variable
+        except:
+            print("An exception occurred")
 
 
 def super_asker(low, high):
@@ -61,7 +79,15 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    return None
+    message = "insert value"
+    while True:
+        input_variable = input("import value here")
+        try:
+            not_number_rejector(message)
+            input_variable < high and input_variable > low
+            return input_variable
+        except:
+            print("An exception occurred")
 
 
 if __name__ == "__main__":
@@ -80,3 +106,5 @@ if __name__ == "__main__":
     not_number_rejector("Enter a number: ")
     print("\nsuper_asker")
     super_asker(33, 42)
+
+# test push
