@@ -41,6 +41,3 @@ Noll, A. M. (1967). The digital computer as a creative medium. IEEE Spectrum, 4(
 > This was a refreshing read, as most of the articles concerning this concept nowadays are from a negative or cautionary perspective. I found the part where it was mentioned, "the artist would be able to specify and control with certainty the emotional state of each individual participant. Only those aspects deliberately specified by the artist might be left to chance or to the whims of the participant. All this would be possible because the computer could monitor the participant's emotional state and change it according to the artist's specifications".
 
 > This reminded me a lot of the concepts we went through in Nicole's class (CODE1210) last semester, where in one of the classes, we went through Ben's possible futures card game. Also this text reminded me of an essay I wrote towards the end of the class, where the debate question was, "The rise of artificial intelligence means the architecture profession is doomed", and it was interesting to see another perspective concerning the role of computers as a medium within design.
-
-#check why weighted mark is low, how to improve
-otherwise parents will be unhappy sigh
