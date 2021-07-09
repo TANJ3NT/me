@@ -124,7 +124,7 @@ def pokedex(low=1, high=5):
     for id in range(low, high):
         url = template.format(id=id)
         r = requests.get(url)
-        if r.status_code is 200:
+        if r.status_code == 200:
             the_json = json.loads(r.text)
             currentheight = the_json["height"]
             if tallest < currentheight:
@@ -153,21 +153,21 @@ def diarist():
     """
 
     mode = "r"
-    pewbook = open("me/set4/Trispokedovetiles(laser).gcode", mode)
+    pewbook = open("set4/Trispokedovetiles(laser).gcode", mode)
     pewbookdata = pewbook.read()
     print(pewbookdata)
     counter = pewbookdata.count("M10 P1")
     pewbook.close()
 
     mode = "w"
-    lasers = open("me/set4/lasers.pew", mode)
+    lasers = open("set4/lasers.pew", mode)
     lasers.write(str(counter))
     lasers.close()
 
     pass
 
 
-if __name__ == "main":
+if __name__ == "__main__":
     functions = [
         obj
         for name, obj in inspect.getmembers(sys.modules[__name__])
@@ -180,4 +180,3 @@ if __name__ == "main":
             print(e)
     if not os.path.isfile("lasers.pew"):
         print("diarist did not create lasers.pew")
-        
