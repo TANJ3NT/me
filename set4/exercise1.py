@@ -180,3 +180,4 @@ if __name__ == "main":
             print(e)
     if not os.path.isfile("lasers.pew"):
         print("diarist did not create lasers.pew")
+        
