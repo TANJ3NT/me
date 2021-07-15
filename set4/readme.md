@@ -30,3 +30,5 @@ TODO: Reflect on what you learned this week and what is still unclear.
 > This was also referenced with geo coded data, so it was really informative to see a project which contained elements which we are required to look into for our own data sets and analysis.
 
 > The process of drawing useful and interesting information from what originally would be just a set of numbers appeared to be a complex one, and the process which Polich went through seemed fairly difficult. I am now quite apprehensive in finding a suitable data set, as I fear the data set I choose, may prove to be difficult later compared to other data sets that could have been chosen.
+
+test save
