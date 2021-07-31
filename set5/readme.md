@@ -10,3 +10,5 @@ TODO: Reflect on what you learned this week and what is still unclear.
 
 > First Data set idea: NTLs (Night Time Lights)
 > Second Data set idea: Auroras (Northern Lights) caused by solar winds
+
+> Update: a few of the data sets I looked into, require the knowledge of external tools such as NASA's Black Marble etc. Unsure if I should tackle the NTL + Black Marble idea I have, or look into another section of interest.
