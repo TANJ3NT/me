@@ -40,10 +40,10 @@ def get_some_details():
     lastname = data["results"][0]["name"]["last"]
     password = data["results"][0]["login"]["password"]
     postcode = data["results"][0]["location"]["postcode"]
-    nameID = data["results"][0]["id"]["value"]
-    postcodePlusID = int(postcode) + int(nameID)
+    ID = data["results"][0]["id"]["value"]
+    postcodePlusID = int(postcode) + int(ID)
 
-    print(lastname, password, postcode, nameID, postcodePlusID)
+    # print(lastname, password, postcodePlusID)
 
     return {
         "lastName": lastname,
@@ -89,18 +89,17 @@ def wordy_pyramid():
 
     list = []
     for number in range(3, 20, 2):
-        ogpart1 = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength="
-        og = ogpart1 + str(number)
+        ogprt1 = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength="
+        og = ogprt1 + str(number)
         oglink = requests.get(og)
         list.append(oglink.text)
-        print(oglink.text)
+        # print(oglink.text)
     for number in range(20, 3, -2):
-        ogpart1 = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength="
-        og = ogpart1 + str(number)
+        ogprt1 = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength="
+        og = ogprt1 + str(number)
         oglink = requests.get(og)
         list.append(oglink.text)
-        print(oglink.text)
-
+        # print(oglink.text)
     return list
 
 
@@ -124,8 +123,9 @@ def pokedex(low=1, high=5):
     for id in range(low, high):
         url = template.format(id=id)
         r = requests.get(url)
-        if r.status_code == 200:
+        if r.status_code is 200:
             the_json = json.loads(r.text)
+            # print(the_json)
             currentheight = the_json["height"]
             if tallest < currentheight:
                 tallest = currentheight
@@ -152,19 +152,17 @@ def diarist():
     TIP: this might come in handy if you need to hack a 3d print file in the future.
     """
 
-    mode = "r"
+    mode = "r"  # from the docs
     pewbook = open("set4/Trispokedovetiles(laser).gcode", mode)
     pewbookdata = pewbook.read()
-    print(pewbookdata)
     counter = pewbookdata.count("M10 P1")
     pewbook.close()
 
     mode = "w"
     lasers = open("set4/lasers.pew", mode)
+    # or ../me/set4/lasers.pew
     lasers.write(str(counter))
     lasers.close()
-
-    pass
 
 
 if __name__ == "__main__":
@@ -180,5 +178,3 @@ if __name__ == "__main__":
             print(e)
     if not os.path.isfile("lasers.pew"):
         print("diarist did not create lasers.pew")
-
-# test push to see if problem still exists
